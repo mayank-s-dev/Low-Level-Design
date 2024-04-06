@@ -7,7 +7,7 @@ interface Bike {
     void accelerate();
 }
 
-class MotorCycle implements Bike{
+class MotorCycle1 implements Bike{
     boolean isEngineOn;
     int speed;
 
@@ -22,8 +22,8 @@ class MotorCycle implements Bike{
     }
 }
 
-//here Bicycle class narrow down the capability(turnOnEngine) of parent class, so it does not follow LiskovSubstitution.
-class Bicycle implements Bike{
+//here Bicycle1 class narrow down the capability(turnOnEngine) of parent class, so it does not follow LiskovSubstitution.
+class Bicycle1 implements Bike{
     public void turnOnEngine(){
         // turn on the engine
         throw new AssertionError("there is no engine");

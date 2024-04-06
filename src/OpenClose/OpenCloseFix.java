@@ -4,11 +4,11 @@ public class OpenCloseFix {
 
 }
 
-public class Invoice {
+class FixInvoice {
     private Marker marker;
     private int quantity;
 
-    public Invoice(Marker marker, int quantity){
+    public FixInvoice(Marker marker, int quantity){
         this.marker = marker;
         this.quantity = quantity;
     }
@@ -20,19 +20,19 @@ public class Invoice {
 }
 
 interface InvoiceDAOFix{
-    public void save(Invoice invoice);
+    public void save(FixInvoice invoice);
 }
 
 class DatabaseInvoiceDAO implements InvoiceDAOFix{
     @Override
-    public void save(Invoice invoice) {
+    public void save(FixInvoice invoice) {
         // save to db
     }
 }
 
 class FileInvoiceDAO implements InvoiceDAOFix{
     @Override
-    public void save(Invoice invoice) {
+    public void save(FixInvoice invoice) {
         // save to file
     }
 }

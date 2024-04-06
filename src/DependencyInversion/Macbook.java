@@ -31,6 +31,7 @@ class Macbook {
     }
 }
 
+
 // FixMacbook mein class hardcoded nhi hai, instead we are using interface
 class FixMacbook {
     private final Keyboard keyboard;
