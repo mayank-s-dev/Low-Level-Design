@@ -8,6 +8,7 @@ public class Vehicle {
     // we won't do like below, because we want our drive strategy to be dynamic
     //    DriveStrategy driveStrategyObj = new NormalDriveStrategy();
 
+    // this is constructor injection
     public Vehicle(DriveStrategy driveStrategy){
         this.driveStrategyObj = driveStrategy;
     }
