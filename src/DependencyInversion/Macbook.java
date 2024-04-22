@@ -56,6 +56,6 @@ class Test {
     // here we created wireless keyboard and wireless mouse
     FixMacbook fm2 = new FixMacbook(k2, m2);
 
-    // here we can only create wired keyboard and wired mouse
+    // here we can only create wired keyboard and wired mouse (check constructor for Macbook class)
     Macbook m = new Macbook();
 }
