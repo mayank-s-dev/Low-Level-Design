@@ -21,6 +21,7 @@ public class BookMyShow {
         bookMyShow.initialize();
 
         bookMyShow.createBooking(City.Bangalore, "Bahubali");
+        bookMyShow.createBooking(City.Bangalore, "Bahubali");
     }
 
     private void createBooking(City city, String movieName) {
