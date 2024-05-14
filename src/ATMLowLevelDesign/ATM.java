@@ -18,8 +18,8 @@ public class ATM {
         return atmObj;
     }
 
-    public void setAtmBalanceAndNotes(int atmBalance, int noOf2kNotes, int noOfFiveHundredNotes, int noOfOneHundredNotes) {
-        this.atmBalance = atmBalance;
+    public void setAtmBalanceAndNotes(int noOf2kNotes, int noOfFiveHundredNotes, int noOfOneHundredNotes) {
+        this.atmBalance = (2000 * noOf2kNotes + 500 * noOfFiveHundredNotes + 100 * noOfOneHundredNotes);
         this.noOf2kNotes = noOf2kNotes;
         this.noOfFiveHundredNotes = noOfFiveHundredNotes;
         this.noOfOneHundredNotes = noOfOneHundredNotes;

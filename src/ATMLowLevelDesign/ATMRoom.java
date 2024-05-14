@@ -19,7 +19,7 @@ public class ATMRoom {
     public void initialize() {
         this.user = createUser();
         this.atm = ATM.getAtmObj();
-        this.atm.setAtmBalanceAndNotes(100000, 25, 80, 100);
+        this.atm.setAtmBalanceAndNotes(25, 80, 100);
     }
 
     private User createUser() {
