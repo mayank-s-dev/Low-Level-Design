@@ -1,6 +1,10 @@
 package ATMLowLevelDesign.ATMStates;
 
 import ATMLowLevelDesign.ATM;
+import ATMLowLevelDesign.AmountWithDrawal.CashWithDrawProcessor;
+import ATMLowLevelDesign.AmountWithDrawal.FiveHundredWithDrawProcessor;
+import ATMLowLevelDesign.AmountWithDrawal.OneHundredWithDrawProcessor;
+import ATMLowLevelDesign.AmountWithDrawal.TwoThousandWithDrawProcessor;
 import ATMLowLevelDesign.Card;
 
 public class CashWithdrawState extends ATMState {
@@ -19,6 +23,14 @@ public class CashWithdrawState extends ATMState {
             // atm.setAtmBalance(newBalance);
             atm.deductAtmBalance(withdrawAmount);
             card.deductUserBalance(withdrawAmount);
+
+            // using COR for withdraw and how many different types of notes are required
+            CashWithDrawProcessor withdrawProcessor =
+                    new TwoThousandWithDrawProcessor(new FiveHundredWithDrawProcessor(new OneHundredWithDrawProcessor(null)));
+
+            withdrawProcessor.withdraw(atm, withdrawAmount);
+            System.out.println("Remaining User Balance: " + card.getUserBankAccount().getBankBalance());
+            exit(atm);
         }
     }
 

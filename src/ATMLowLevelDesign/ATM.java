@@ -81,4 +81,15 @@ public class ATM {
     }
 
 
+    public void deductFiveHundredNotes(int requiredNotes) {
+        this.setNoOfFiveHundredNotes(this.getNoOfFiveHundredNotes() - requiredNotes);
+    }
+
+    public void deductOneHundredNotes(int requiredNotes) {
+        this.setNoOfOneHundredNotes(this.getNoOfOneHundredNotes() - requiredNotes);
+    }
+
+    public void deductTwoThousandNotes(int requiredNotes) {
+        this.setNoOf2kNotes(this.getNoOf2kNotes() - requiredNotes);
+    }
 }
